@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents & Papers – Tristin Porter</title>
+
+    <style>
+        /* --- Global Site Style (matches homepage) --- */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: #0078ff;
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* --- Reverse Scroll Layout --- */
+
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            overflow-y: hidden;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .column-reverse {
+            flex-direction: column-reverse;
+            transform: translateY(calc(-100% + 100vh));
+        }
+
+        /* Document card styling */
+        .doc {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .doc h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #0078ff;
+        }
+
+        .doc a {
+            color: #0078ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .doc a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Scroll-driven Animation --- */
+
+        @supports (animation-timeline: scroll()) {
+
+            @keyframes adjust-position {
+                from {
+                    transform: translateY(calc(-100% + 100vh));
+                }
+                to {
+                    transform: translateY(calc(100% - 100vh));
+                }
+            }
+
+            .column-reverse {
+                animation: adjust-position linear forwards;
+                animation-timeline: scroll(root block);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Documents & Papers</h1>
+    <h2>Three‑Column Reverse‑Scroll Experience</h2>
+</header>
+
+<div class="section">
+    <div class="divider"></div>
+    <p>Browse example documents, placeholder papers, and sample long‑form notes.</p>
+</div>
+
+<!-- Three Column Reverse Scroll Layout -->
+<div class="columns">
+
+    <!-- LEFT COLUMN (reverse scroll) -->
+    <div class="column column-reverse">
+
+        <div class="doc"><h3>Example Document A</h3><p>Sample placeholder text.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document B</h3><p>Another example entry.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document H</h3><p>Extra filler content.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document I</h3><p>More sample text.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document J</h3><p>Testing scroll depth.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document K</h3><p>Reverse scroll demo.</p><a href="#">Open Example →</a></div>
+
+    </div>
+
+    <!-- CENTER COLUMN (normal scroll) -->
+    <div class="column">
+
+        <div class="doc"><h3>Example Document C</h3><p>Center column example.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document D</h3><p>Mock research paper.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document E</h3><p>Another center entry.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document L</h3><p>Additional placeholder.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document M</h3><p>More filler content.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document N</h3><p>Scrolling test item.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document O</h3><p>Extra center content.</p><a href="#">Open Example →</a></div>
+
+    </div>
+
+    <!-- RIGHT COLUMN (reverse scroll) -->
+    <div class="column column-reverse">
+
+        <div class="doc"><h3>Example Document F</h3><p>Right column sample.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document G</h3><p>Reverse scroll test.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document P</h3><p>Extra placeholder.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document Q</h3><p>More sample text.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document R</h3><p>Testing animation.</p><a href="#">Open Example →</a></div>
+        <div class="doc"><h3>Example Document S</h3><p>Scroll depth filler.</p><a href="#">Open Example →</a></div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Tristin Porter — All Rights Reserved
+</footer>
+
+</body>
+</html>
