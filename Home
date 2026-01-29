@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tristin Porter</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.2rem;
+            margin: 0;
+        }
+
+        header h2 {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .links {
+            margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 12px;
+            padding: 14px 28px;
+            font-size: 1.15rem;
+            text-decoration: none;
+            color: white;
+            background: #0078ff;
+            border-radius: 8px;
+            transition: background 0.2s ease, transform 0.15s ease;
+        }
+
+        .button:hover {
+            background: #005fcc;
+            transform: translateY(-2px);
+        }
+
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: #0078ff;
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tristin Porter</h1>
+        <h2>Developer • Systems Architect • Data Scientist</h2>
+    </header>
+
+    <div class="section">
+        <div class="divider"></div>
+        <p>
+            Welcome to my personal developer site.  
+            I use this space to publish the software I build, the research papers I write, 
+            and the long‑term engineering projects I’m exploring.  
+            My work focuses on compilers, parsing algorithms, systems design, and 
+            web development.
+        </p>
+
+        <div class="links">
+            <a href="/Projects" class="button">Projects Gallery</a>
+            <a href="/Documents" class="button">Documents & Papers</a>
+        </div>
+    </div>
+
+    <footer>
+        Tristin Porter
+    </footer>
+
+</body>
+</html>
